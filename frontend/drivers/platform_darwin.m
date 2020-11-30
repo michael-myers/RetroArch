@@ -323,11 +323,6 @@ static void frontend_darwin_get_os(char *s, size_t len, int *major, int *minor)
       *major = (int)version.majorVersion;
       *minor = (int)version.minorVersion;
    }
-   else
-   {
-      Gestalt(gestaltSystemVersionMinor, (SInt32*)minor);
-      Gestalt(gestaltSystemVersionMajor, (SInt32*)major);
-   }
 #endif
    strcpy_literal(s, "OSX");
 #endif
