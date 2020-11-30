@@ -784,6 +784,9 @@ static void iohidmanager_hid_device_add_device(
                         break;
                   }
                   break;
+               case kIOHIDElementTypeInput_NULL:
+                    /* TODO */
+                  break;
             }
             break;
          case kHIDPage_Consumer:
@@ -800,6 +803,9 @@ static void iohidmanager_hid_device_add_device(
                case kIOHIDElementTypeInput_Misc:
                case kIOHIDElementTypeInput_Button:
                   detected_button = 1;
+                  break;
+               case kIOHIDElementTypeInput_NULL:
+                  /* TODO */
                   break;
             }
             break;
